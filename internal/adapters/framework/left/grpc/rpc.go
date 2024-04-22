@@ -6,7 +6,6 @@ import (
 	"github.com/ama29n/hex/internal/adapters/framework/left/grpc/pb"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
-	"google.golang.org/status"
 )
 
 func (grpca Adapter) GetAddition(ctx context.Context, req *pb.OperationParameters) (*pb.Answer, error) {
