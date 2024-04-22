@@ -14,3 +14,5 @@ service ArithmaticService {
     rpc GetMultiplication(OperationParameters) returns (Answer) {}
     rpc GetDivision(OperationParameters) returns (Answer) {}
 }
+
+// protoc --go_out=plugins=grpc=internal/adapters/framework/eft/grpc --proto_path=internal/adapters/framework/left/grpc/proto
