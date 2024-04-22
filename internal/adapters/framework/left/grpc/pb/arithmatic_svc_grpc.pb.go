@@ -80,17 +80,16 @@ func (c *arithmaticServiceClient) GetDivision(ctx context.Context, in *Operation
 }
 
 // ArithmaticServiceServer is the server API for ArithmaticService service.
-// All implementations must embed UnimplementedArithmaticServiceServer
+// All implementations should embed UnimplementedArithmaticServiceServer
 // for forward compatibility
 type ArithmaticServiceServer interface {
 	GetAddition(context.Context, *OperationParameters) (*Answer, error)
 	GetSubtraction(context.Context, *OperationParameters) (*Answer, error)
 	GetMultiplication(context.Context, *OperationParameters) (*Answer, error)
 	GetDivision(context.Context, *OperationParameters) (*Answer, error)
-	mustEmbedUnimplementedArithmaticServiceServer()
 }
 
-// UnimplementedArithmaticServiceServer must be embedded to have forward compatible implementations.
+// UnimplementedArithmaticServiceServer should be embedded to have forward compatible implementations.
 type UnimplementedArithmaticServiceServer struct {
 }
 
@@ -106,7 +105,6 @@ func (UnimplementedArithmaticServiceServer) GetMultiplication(context.Context, *
 func (UnimplementedArithmaticServiceServer) GetDivision(context.Context, *OperationParameters) (*Answer, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetDivision not implemented")
 }
-func (UnimplementedArithmaticServiceServer) mustEmbedUnimplementedArithmaticServiceServer() {}
 
 // UnsafeArithmaticServiceServer may be embedded to opt out of forward compatibility for this service.
 // Use of this interface is not recommended, as added methods to ArithmaticServiceServer will
