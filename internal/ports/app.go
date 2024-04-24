@@ -1,5 +1,7 @@
 package ports
 
+// application port
+
 type APIPort interface {
 	GetAddition(a, b int32) (int32, error)
 	GetSubtraction(a, b int32) (int32, error)

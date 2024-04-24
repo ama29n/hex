@@ -10,7 +10,6 @@ type Adapter struct {
 }
 
 // dependency injection
-// this is part of application layer
 // benefit of this is, we can make changes to core layer without needing to change application layer
 
 func NewAdapter(db ports.DBPort, arith ports.ArithmaticPort) *Adapter {

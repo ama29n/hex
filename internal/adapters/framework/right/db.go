@@ -34,7 +34,7 @@ func NewAdapter(driverName, dataSourceName string) (*Adapter, error) {
 func (da Adapter) CloseDBConnection() {
 	err := da.db.Close()
 	if err != nil {
-		log.Fatalf("DB close failure")
+		log.Fatalf("DB close failure: %v", err)
 	}
 }
 

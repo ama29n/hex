@@ -15,4 +15,4 @@ service ArithmaticService {
     rpc GetDivision(OperationParameters) returns (Answer) {}
 }
 
-// protoc --go_out=plugins=grpc=internal/adapters/framework/eft/grpc --proto_path=internal/adapters/framework/left/grpc/proto
+// protoc --go-grpc_out=require_unimplemented_servers=false:internal/adapters/framework/left/grpc --proto_path=internal/adapters/framework/left/grpc/proto internal/adapters/framework/left/grpc/proto/arithmatic_svc.proto 

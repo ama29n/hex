@@ -1,6 +1,7 @@
 package arithmatic
 
-// Arithmatic Adapter is implementing ArithmaticPort interface
+// arithmatic adapter is implementing ArithmaticPort interface
+
 type Adapter struct {
 }
 

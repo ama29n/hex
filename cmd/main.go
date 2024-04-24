@@ -40,5 +40,4 @@ func main() {
 	grpcAdapter = grpc.NewAdapter(appAdapter)
 
 	grpcAdapter.RUN()
-
 }
