@@ -17,10 +17,10 @@ func NewAdapter(api ports.APIPort) *Adapter {
 	return &Adapter{api: api}
 }
 
-func (grpca Adapter) Run() {
+func (grpca Adapter) RUN() {
 	var err error
 
-	listen, err := net.Listen("tcp", ":900")
+	listen, err := net.Listen("tcp", ":9000")
 
 	if err != nil {
 		log.Fatalf("failed to listen on port 9000: %v", err)
